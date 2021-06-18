@@ -1,0 +1,50 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+video{
+  width: 100%;
+  height: auto;
+}
+
+body{
+  text-align: center;
+  padding-top: 20px;
+}
+
+::-webkit-scrollbar { width: 0px; }
+
+.window-title{
+  font-size: larger;
+}
+
+/* .rec{
+  height: 85vh;
+} */
+
+.cont{
+  margin-top: 2px;
+  height: 30px;
+  padding: 10px;
+}
+
+hr{
+  margin: 0;
+}
+
+.rec {
+  padding: 10px;
+  box-sizing: border-box;
+  resize: horizontal;
+  border: 1px dashed;
+  overflow: auto;
+  max-width: 100%;
+  height: calc(100vh - 16px);
+}
+
+.rec > video {
+  width: 100%;
+  padding-bottom: 75%;
+}
