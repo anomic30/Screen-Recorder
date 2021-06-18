@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, TouchBarColorPicker } = require('electron');
 const path = require('path');
 // Menu.setApplicationMenu(false);
 
@@ -12,6 +12,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1280,
     height: 750,
+    backgroundColor: '#FFFF00',
     titleBarStyle: "hidden",
     frame: false,
     webPreferences: {
