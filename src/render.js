@@ -4,7 +4,9 @@ const { dialog, Menu } = remote;
 const customTitlebar = require('custom-electron-titlebar');
 
 new customTitlebar.Titlebar({
-    backgroundColor: customTitlebar.Color.fromHex('#444'),
+  backgroundColor: customTitlebar.Color.fromHex('#444'),
+  shadow: true,
+  icon: './icon.ico',
 });
 
 // Global state

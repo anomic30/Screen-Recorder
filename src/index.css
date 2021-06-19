@@ -22,8 +22,10 @@ body{
 }
 
 video{
+  position: relative;
   width: 90%;
-  padding-top: 0%;
+  top: 0;
+  height: auto;
 }
 
 .cont{
@@ -34,12 +36,13 @@ video{
   left: 0;
   bottom: 0;
   width: 100%;
+  display: block;
 }
 
 hr{
   margin: 0;
   color: #181818;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .btns{
