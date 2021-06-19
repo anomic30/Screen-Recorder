@@ -1,20 +1,38 @@
 {
   "name": "my-app",
-  "productName": "my-app",
+  "productName": "Screen Recorder",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A simple, fast & easy to use screen recorder",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+	"build-installer": "electron-builder"
   },
+  "build":{
+	"appId": "my-app",
+	"win":{
+		"target":["nsis"],
+		"icon": "src/icon.png",
+	}
+	"nsis":{
+		"installerIcon": "src/icon.png",
+		"uninstallerIcon": "src/icon.png",
+		"uninstallerDisplayName": "Screen Recorder",
+		"license": "license.txt",
+		"oneClick": false,
+		"allowToChangeInstallationDirectory": true,
+	}
+  
+  }
   "keywords": [],
   "author": {
     "name": "[Anom Chakravorty]",
-    "email": "anomchakravorty3008@gmail.com"
+    "email": "anomchakravorty3008@gmail.com",
+	"github": "https://github.com/anomic30"
   },
   "license": "MIT",
   "config": {
@@ -46,6 +64,7 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.7",
+    "electron-builder": "^22.11.7",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
