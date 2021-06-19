@@ -1,4 +1,5 @@
-const { app, BrowserWindow, Menu, TouchBarColorPicker } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
+const shell = require('electron').shell;
 const path = require('path');
 // Menu.setApplicationMenu(false);
 
@@ -12,8 +13,9 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1280,
     height: 750,
-    backgroundColor: '#FFFF00',
     titleBarStyle: "hidden",
+    minWidth: 1280,
+    minHeight: 750,
     frame: false,
     webPreferences: {
       nodeIntegration: true,
@@ -21,6 +23,27 @@ const createWindow = () => {
       enableRemoteModule: true,
     },
   });
+
+  var menu = Menu.buildFromTemplate([
+      {
+          label: 'About',
+          submenu: [
+            {
+              label: 'GitHub Repo',
+              click() {
+                shell.openExternal('https://github.com/anomic30/Screen-Recorder');
+              }
+            },
+            {
+              label: 'About me',
+              click() {
+                shell.openExternal('https://www.linkedin.com/in/anomic/');
+              }
+            },
+          ]
+      }
+  ])
+  Menu.setApplicationMenu(menu); 
 
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
