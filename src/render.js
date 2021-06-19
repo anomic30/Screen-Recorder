@@ -84,7 +84,6 @@ async function selectSource(source) {
   mediaRecorder.ondataavailable = handleDataAvailable;
   mediaRecorder.onstop = handleStop;
 
-  // Updates the UI
 }
 
 // Captures all recorded chunks
