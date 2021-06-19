@@ -17,7 +17,7 @@ const videoElement = document.querySelector('video');
 const startBtn = document.getElementById('startBtn');
 startBtn.onclick = e => {
   mediaRecorder.start();
-  startBtn.classList.add('is-danger');
+  startBtn.classList.add('btn-warning');
   startBtn.innerText = 'Recording';
 };
 
@@ -25,7 +25,7 @@ const stopBtn = document.getElementById('stopBtn');
 
 stopBtn.onclick = e => {
   mediaRecorder.stop();
-  startBtn.classList.remove('is-danger');
+  startBtn.classList.remove('btn-warning');
   startBtn.innerText = 'Start';
 };
 

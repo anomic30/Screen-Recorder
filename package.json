@@ -10,29 +10,30 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-	"build-installer": "electron-builder"
+    "build-installer": "electron-builder"
   },
-  "build":{
-	"appId": "my-app",
-	"win":{
-		"target":["nsis"],
-		"icon": "src/icon.png",
-	}
-	"nsis":{
-		"installerIcon": "src/icon.png",
-		"uninstallerIcon": "src/icon.png",
-		"uninstallerDisplayName": "Screen Recorder",
-		"license": "license.txt",
-		"oneClick": false,
-		"allowToChangeInstallationDirectory": true,
-	}
-  
-  }
+  "build": {
+    "appId": "my-app",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/icon.ico",
+      "uninstallerIcon": "src/icon.ico",
+      "uninstallDisplayName": "Screen Recorder",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
   "keywords": [],
   "author": {
     "name": "[Anom Chakravorty]",
     "email": "anomchakravorty3008@gmail.com",
-	"github": "https://github.com/anomic30"
+    "github": "https://github.com/anomic30"
   },
   "license": "MIT",
   "config": {
@@ -64,7 +65,6 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.7",
-    "electron-builder": "^22.11.7",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
@@ -73,6 +73,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.57",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
-    "electron": "^13.1.2"
+    "electron": "^13.1.2",
+    "electron-builder": "^22.11.7"
   }
 }
